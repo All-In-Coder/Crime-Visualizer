@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+
+        }
+        .selectFile {
+            position: absolute;
+            width: 102%;
+            justify-content: center;
+            height: 100vh;
+            border: 2px solid black;
+            background-image: url("data:image/jpeg;base64,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");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        
+        }
+
+        #label {
+            margin: 0 40%;
+            color: white;
+            margin-top: 100px;
+            margin-bottom: 40px;
+        }
+
+        #myfile {
+            margin: 0 40%;
+            width: 400px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .submit {
+            margin: 0 40%;
+            width: 350 px;
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+        img{
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    {% extends "navbar.html" %}
+    {% block navbar %}
+    {{super()}}
+    <!-- <img src="https://storage.googleapis.com/afs-prod/media/afs:Medium:5541950108/775.jpeg" alt="" srcset=""> -->
+    <form action="/send" method="post" enctype="multipart/form-data">
+        <div class="selectFile">
+
+            <label for="myfile" style=" font-size: 40px;" id="label">Select a file:</label>
+            <br>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            <button type="submit" class="submit">Submit</button>
+
+        </div>
+    </form>
+
+    {% endblock %}
+</body>
+
+</html>

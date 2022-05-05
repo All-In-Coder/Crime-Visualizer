@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crime Visualization!</title>
+
+    <style>
+        
+        .report{
+            position: absolute;
+            height: 350px;
+            width: 600px;
+            margin: 0 30%;
+            margin-top: 140px;
+        }
+        .report p{
+            padding: 20px;
+            padding-left: 80px;
+        }
+        #first{
+            color:red;
+        }
+        #second{
+                color:green;
+        }
+        #third{
+            color:blanchedalmond;
+        }
+        p{
+            color:white;
+            font-size: 23px;
+        }
+        .body{
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: url("https://t3.ftcdn.net/jpg/01/83/50/32/360_F_183503230_heDoLySnwt4W968RVTJOf7LFHbkZdCHA.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+    
+
+</head>
+<body>
+    {% extends "navbar.html" %}
+    {% block navbar %}
+    {{super()}}
+
+    {% if haveReport %}
+        <div class="body">
+
+       
+        <div class="report">
+            <p>City with Most Crimes:&nbsp;&nbsp;<span id="first"> {{Report[0][0]}} ({{Report[0][1]}})</span></p>
+            <p>Crime most occured:&nbsp;&nbsp; <span id="second">{{Report[1][0]}} ({{Report[1][1]}})</span></p>
+            <p>Day with Most Crimes:&nbsp;&nbsp; <span id="third">{{Report[2][0]}} ({{Report[2][1]}})</span></p>
+            <p>Number of Cases not Resolved:&nbsp;&nbsp; <span id="third">{{Report[3]}}</span></p>
+        </div>
+    </div>
+    {% endif %}
+
+
+    {% endblock %}
+</body>
+</html>
